@@ -204,6 +204,7 @@ html {
     color: #222;
     background-color: white;
     text-decoration: none;
+    transition: all ease .2s;
 }
 .btn:hover {
     background-color: var(--primary-color);

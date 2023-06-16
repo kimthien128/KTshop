@@ -156,8 +156,8 @@
                                     <li class="navbar-user-menu-list__item">
                                         <a href="#" class="navbar-user-menu-list-item__link">Đơn mua</a>
                                     </li>
-                                    <li class="navbar-user-menu-list__item logOut">
-                                        <a href="#" class="navbar-user-menu-list-item__link">Đăng xuất</a>
+                                    <li class="navbar-user-menu-list__item">
+                                        <a href="/" class="navbar-user-menu-list-item__link">Đăng xuất</a>
                                     </li>
                                 </ul>
                             </div>
@@ -218,11 +218,11 @@
 
                             <!-- No Cart: header-cart--noCart -->
                             <div class="header-cart__product">
-                                <img src="./assets/img/no-cart.png" alt="No Cart" class="header-cart-noCart__img">
-                                <span class="header-cart-noCart__msg gray8">Chưa có sản phẩm</span>
-
                                 <h3 class="header-cart-product__heading gray4 no-select">Sản phẩm mới thêm</h3>
+
                                 <ul class="header-cart-product__list">
+                                    <img src="./assets/img/no-cart.png" alt="No Cart" class="header-cart-noCart__img">
+
                                     <li class="header-cart-product-list__item">
                                         <div class="header-cart-product-list-item__img">
                                             <img src="./assets/img/27074d7726eb50cbf5418649187dd35a_tn.jpg" alt="">
@@ -262,9 +262,30 @@
                                             <h4 class="header-cart-product-list-item-info__price">₫168.000</h4>
                                         </div>
                                     </li>
+
+                                    <li class="header-cart-product-list__item">
+                                        <div class="header-cart-product-list-item__img">
+                                            <img src="./assets/img/f028083c4c479efec28ff3e1ee2334c2_tn.jpg" alt="">
+                                        </div>
+                                        <div class="header-cart-product-list-item__info">
+                                            <h4 class="header-cart-product-list-item-info__heading">Kem nền dạng lỏng</h4>
+                                            <h4 class="header-cart-product-list-item-info__price">₫168.000</h4>
+                                        </div>
+                                    </li>
+
+                                    <li class="header-cart-product-list__item">
+                                        <div class="header-cart-product-list-item__img">
+                                            <img src="./assets/img/f028083c4c479efec28ff3e1ee2334c2_tn.jpg" alt="">
+                                        </div>
+                                        <div class="header-cart-product-list-item__info">
+                                            <h4 class="header-cart-product-list-item-info__heading">Kem nền dạng lỏng</h4>
+                                            <h4 class="header-cart-product-list-item-info__price">₫168.000</h4>
+                                        </div>
+                                    </li>
                                 </ul>
                                 <footer class="header-cart-product__footer">
-                                    <p class="header-cart-product-footer__quantity gray8">24 thêm hàng vào giỏ</p>
+                                    <p class="header-cart-product-footer__quantity gray8">24 sản phẩm</p>
+                                    <span class="header-cart-product-footer__clearAll btn">Xóa toàn bộ</span>
                                     <a href="#" class="btn btn--primary">Xem giỏ hàng</a>
                                 </footer>
                             </div>
@@ -361,16 +382,16 @@
                         <!-- Product sortBar -->
                         <div class="product__sortBar hide-on-mobile-tablet">
                             <span class="product-sortBar__desc gray8 no-select">Sắp xếp theo</span>
-                            <a href="" class="product-sortBar__btn btn btn--primary">Phổ biến</a>
-                            <a href="" class="product-sortBar__btn btn">Mới nhất</a>
-                            <a href="" class="product-sortBar__btn btn">Bán chạy</a>
-                            <div class="product-sortBar__sortPrice selectOption">
+                            <a class="product-sortBar__btn btn btn--primary">Phổ biến</a>
+                            <a class="product-sortBar__btn btn">Mới nhất</a>
+                            <a class="product-sortBar__btn btn">Bán chạy</a>
+                            <div class="product-sortBar__btn sortPrice selectOption">
                                 <p class="selectOption__text">Giá</p>
                                 <i class="fa-solid fa-angle-down"></i>
                                 <div class="selectOption--showOption">
                                     <ul>
-                                        <li>Giá: THẤP ➡ CAO</li>
-                                        <li>Giá: CAO ➡ THẤP</li>
+                                        <li class="sortPriceOption">Giá: THẤP ➡ CAO</li>
+                                        <li class="sortPriceOption">Giá: CAO ➡ THẤP</li>
                                     </ul>
                                 </div>
                             </div>
@@ -1232,13 +1253,13 @@
                     </div>
                     <div class="auth__body">
                         <div class="auth-body__group">
-                            <input type="email" class="auth-body-group__input" placeholder="Email" required>
+                            <input type="email" class="auth-body-group__input" placeholder="Email" required="">
                         </div>
                         <div class="auth-body__group">
-                            <input type="password" class="auth-body-group__input" placeholder="Password" required>
+                            <input type="password" class="auth-body-group__input" placeholder="Password" required="">
                         </div>
                         <div class="auth-body__group">
-                            <input type="password" class="auth-body-group__input" placeholder="Re-enter your password" required>
+                            <input type="password" class="auth-body-group__input" placeholder="Re-enter your password" required="">
                         </div>
                         <div class="auth-body__aside">
                             <p class="auth-body-aside__policy-text">

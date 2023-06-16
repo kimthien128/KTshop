@@ -37,7 +37,7 @@ const registerSuccess = $('.register-form .btnModalForm');
 const loginSuccess = $('.login-form .btnModalForm:not(.btnBack)');
 const socialLogin = $$('.auth-social__link');
 const user = $('.navbar-item.navbar__user');
-const userLogoutBtn = $('.navbar__user .logOut')
+const cart = $('.header__cart-wrap');
 registerNav.onclick = () => {
     showRegisterForm();
 };
@@ -86,16 +86,55 @@ socialLogin.forEach(function(item) {
         loginSuccessState();
     };
 });
-userLogoutBtn.onclick = function(){
-    notLoginState();
-};
+
 function loginSuccessState(){
     registerNav.style.display = 'none';
     loginNav.style.display = 'none';
     user.style.display = 'flex';
+    cart.style.display = 'inline-block';
 }
-function notLoginState(){
-    registerNav.style.display = 'list-item';
-    loginNav.style.display = 'list-item';
-    user.style.display = 'none';
+
+
+// Clear Cart Product
+const clearCartBtn = $('.header-cart-product-footer__clearAll');
+const allProductsInCart = $$('.header-cart-product-list__item');
+const listCart = $('.header-cart-product__list');
+const noCartImg = $('.header-cart-noCart__img');
+let headingCart = $('.header-cart-product__heading');
+let quantityCart = $('.header-cart-product-footer__quantity');
+let noticeCart = $('.header-cart__notice');
+
+noticeCart.innerText = allProductsInCart.length;
+quantityCart.innerText = `${noticeCart.innerText} sản phẩm`
+clearCartBtn.onclick = () => {
+    allProductsInCart.forEach(product =>{
+       product.remove();
+       noCartState();
+        noticeCart.innerText = 0;
+    });
+};
+function noCartState(){
+    noCartImg.style.display = 'block';
+    headingCart.innerText = 'Oh no!!! Bạn không có gì trong giỏ hàng của mình cả'
+    quantityCart.innerText = '0 sản phẩm';
+    clearCartBtn.style.display = 'none';
+    listCart.style.minHeight = '35vh';
 }
+
+// Sort bar
+const sortBarBtns = $$('.product-sortBar__btn');
+let sortPriceText = $('.selectOption__text');
+const sortPriceOptions = $$('.sortPriceOption');
+sortBarBtns.forEach(function(item){
+    item.addEventListener('click', function(e){
+        sortBarBtns.forEach(function(item){
+            item.classList.remove('btn--primary');
+        });
+        item.classList.add('btn--primary');
+    });
+})
+sortPriceOptions.forEach(function(item){
+    item.addEventListener('click', function(e){
+        sortPriceText.innerText = item.innerText;
+    });
+});
