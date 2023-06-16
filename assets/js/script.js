@@ -138,3 +138,26 @@ sortPriceOptions.forEach(function(item){
         sortPriceText.innerText = item.innerText;
     });
 });
+
+
+// Pagination
+const paginationItems = $$('.pagination__item');
+const paginationNext = $('.pagination__control.pagination-next');
+const paginationPrev = $('.pagination__control.pagination-prev');
+paginationItems.forEach(function(item, index) {
+    lastPage = paginationItems.length - 1;
+    currentIndex = 1;
+    item.addEventListener('click', function(e){
+        paginationItems.forEach(function(item){
+            item.classList.remove('pagination__item--active');
+        });
+        item.classList.add('pagination__item--active');
+    });
+});
+function nextPage(){
+    this.currentIndex++;
+    if(this.currentIndex >= this.songs.length){
+        this.currentIndex = 1;
+    };
+    console.log(this.currentIndex);
+}

@@ -297,6 +297,7 @@ html {
     align-items: center;
     padding: 0;
 }
+.pagination__control,
 .pagination__item {
     font-size: 1.8rem;
     margin: 0 1.6rem;
@@ -311,14 +312,15 @@ html {
     height: var(--height);
     line-height: var(--height);
     border-radius: .4rem;
+    cursor: pointer;
 }
 .pagination-item__link:hover,
-.pagination__item--actived .pagination-item__link {
+.pagination__item--active .pagination-item__link {
     background-color: var(--primary-color);
     color: white;
 
 }
-.pagination__item--actived:hover .pagination-item__link {
+.pagination__item--active:hover .pagination-item__link {
     opacity: .9;
 }
 /* End: Pagination */
