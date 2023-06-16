@@ -154,10 +154,46 @@ paginationItems.forEach(function(item, index) {
         item.classList.add('pagination__item--active');
     });
 });
+
+paginationNext.addEventListener('click', function(){
+    nextPage();
+});
+paginationPrev.addEventListener('click', function(){
+    prevPage();
+});
+
 function nextPage(){
-    this.currentIndex++;
-    if(this.currentIndex >= this.songs.length){
-        this.currentIndex = 1;
-    };
-    console.log(this.currentIndex);
+    var activeIndex = -1;
+    paginationItems.forEach(function(item, index) {
+        if(item.classList.contains('pagination__item--active')){
+            activeIndex = index;
+        }
+    })
+    activeIndex ++;
+    if(activeIndex > lastPage){
+        activeIndex = 0;
+    }
+    paginationItems.forEach(function(item){
+        item.classList.remove('pagination__item--active');
+    });
+    paginationItems[activeIndex].classList.add('pagination__item--active');
+    
+}
+function prevPage(){
+    var activeIndex = 0;
+    paginationItems.forEach(function(item, index) {
+        if(item.classList.contains('pagination__item--active')){
+            activeIndex = index;
+        }
+    })
+    activeIndex --;
+    console.log(activeIndex);
+    if(activeIndex < 0){
+        activeIndex = lastPage;
+    }
+    paginationItems.forEach(function(item){
+        item.classList.remove('pagination__item--active');
+    });
+    paginationItems[activeIndex].classList.add('pagination__item--active');
+    
 }
