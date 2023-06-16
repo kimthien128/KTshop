@@ -174,7 +174,7 @@ html {
     bottom: 0;
     right: 0;
     left: 0;
-    display: flex;
+    /* display: flex; */
     display: none;
     animation: fadeIn ease .2s ;
 }

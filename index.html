@@ -125,29 +125,25 @@
                         </li>
                         <li class="navbar-item navbar__language--show">
                             <i class="fa-solid fa-globe"></i>
-                            Tiếng Việt
+                            <span class="navbar-language__text">Tiếng Việt</span>
                             <i class="fa-solid fa-angle-down"></i>
                             <div class="language">
                                 <ul class="language__list">
                                     <li class="language-list__item">
-                                        <a href="#" class="language-item__link language-item__link--actived">Tiếng Việt</a>
+                                        <span class="language-item__link language-item__link--active">Tiếng Việt</span>
                                     </li>
                                     <li class="language-list__item">
-                                        <a href="#" class="language-item__link">English</a>
+                                        <span class="language-item__link">English</span>
                                     </li>
                                 </ul>
                             </div>
                         </li>
-                        <!-- <li class="navbar-item">
-                            <a href="#" class="navbar-link">
-                                Đăng Ký
-                            </a>
+                        <li class="navbar-item register">
+                            <a href="#" class="navbar-link">Đăng Ký</a>
                         </li>
-                        <li class="navbar-item navbar-separate">
-                            <a href="#" class="navbar-link">
-                                Đăng Nhập
-                            </a>
-                        </li> -->
+                        <li class="navbar-item login navbar-separate">
+                            <a href="#" class="navbar-link">Đăng Nhập</a>
+                        </li>
                         <li class="navbar-item navbar__user">
                             <img src="./assets/img/avatar.jpg" alt="" class="navbar-user__avatar">
                             <span class="navbar-user__userName">Kim Thiện</span>
@@ -160,7 +156,7 @@
                                     <li class="navbar-user-menu-list__item">
                                         <a href="#" class="navbar-user-menu-list-item__link">Đơn mua</a>
                                     </li>
-                                    <li class="navbar-user-menu-list__item">
+                                    <li class="navbar-user-menu-list__item logOut">
                                         <a href="#" class="navbar-user-menu-list-item__link">Đăng xuất</a>
                                     </li>
                                 </ul>
@@ -1228,7 +1224,7 @@
         </div>
         <div class="modal__body">
             <!-- Register Form -->
-            <!-- <div class="auth-form">
+            <div class="auth-form register-form">
                 <div class="auth__container">
                     <div class="auth__header">
                         <h3 class="auth-header__title gray8">Đăng Ký</h3>
@@ -1236,13 +1232,13 @@
                     </div>
                     <div class="auth__body">
                         <div class="auth-body__group">
-                            <input type="email" class="auth-body-group__input" placeholder="Email">
+                            <input type="email" class="auth-body-group__input" placeholder="Email" required>
                         </div>
                         <div class="auth-body__group">
-                            <input type="password" class="auth-body-group__input" placeholder="Password">
+                            <input type="password" class="auth-body-group__input" placeholder="Password" required>
                         </div>
                         <div class="auth-body__group">
-                            <input type="password" class="auth-body-group__input" placeholder="Re-enter your password">
+                            <input type="password" class="auth-body-group__input" placeholder="Re-enter your password" required>
                         </div>
                         <div class="auth-body__aside">
                             <p class="auth-body-aside__policy-text">
@@ -1253,25 +1249,24 @@
                             </p>
                         </div>
                         <div class="auth-body__controls-btn">
-                            <button class="btn">TRỞ LẠI</button>
-                            <button class="btn btn--primary ml-12">ĐĂNG KÝ</button>
+                            <button class="btn btn--primary btnModalForm ml-12">ĐĂNG KÝ</button>
                         </div>
                     </div>
                 </div>
                 <div class="auth__social">
-                    <a href="#" class="auth-social__link">
+                    <a class="auth-social__link">
                         <i class="fa-brands fa-square-facebook"></i>
                         <span class="ml-12">Kết nối với Facebook</span>
                     </a>
-                    <a href="#" class="auth-social__link">
+                    <a class="auth-social__link">
                         <i class="fa-brands fa-google"></i>
                         <span class="ml-12">Kết nối với Google</span>
                     </a>
                 </div>
-            </div> -->
+            </div>
 
             <!-- Login Form -->
-            <!-- <div class="auth-form">
+            <div class="auth-form login-form">
                 <div class="auth__container">
                     <div class="auth__header">
                         <h3 class="auth-header__title gray8">Đăng nhập</h3>
@@ -1293,24 +1288,24 @@
                             </div>
                         </div>
                         <div class="auth-body__controls-btn">
-                            <button class="btn">TRỞ LẠI</button>
-                            <button class="btn btn--primary ml-12">ĐĂNG NHẬP</button>
+                            <button class="btn btnModalForm btnBack">TRỞ LẠI</button>
+                            <button class="btn btn--primary btnModalForm ml-12">ĐĂNG NHẬP</button>
                         </div>
                     </div>
                 </div>
                 <div class="auth__social">
-                    <a href="#" class="auth-social__link">
+                    <a class="auth-social__link">
                         <i class="fa-brands fa-square-facebook"></i>
                         <span class="ml-12">Đăng nhập với Facebook</span>
                     </a>
-                    <a href="#" class="auth-social__link">
+                    <a class="auth-social__link">
                         <i class="fa-brands fa-google"></i>
                         <span class="ml-12">Đăng nhập với Google</span>
                     </a>
                 </div>
-            </div> -->
+            </div>
         </div>
     </div>
-    <script src="./assets/script.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>

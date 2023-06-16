@@ -59,7 +59,8 @@
 
 /* User */
 .navbar-item.navbar__user {
-    display: flex;
+    /* display: flex; */
+    display: none;
     align-items: center;
 }
 .navbar__user:hover .navbar-user__menu {
@@ -313,6 +314,10 @@
     background-color: #fafafa;
     border-radius: .4rem;
 }
+.navbar-language__text {
+    display: inline-block;
+    width: 7rem;
+}
 .language-item__link{
     text-decoration: none;
     display: block;
@@ -320,7 +325,7 @@
     color: #222;
     padding: 1rem;
 }
-.language-item__link--actived {
+.language-item__link--active {
     color: var(--primary-color);
     font-weight: 600;
 }
@@ -329,6 +334,15 @@
 .auth-form {
     width: 50rem;
 
+}
+.register-form {
+    display: none;
+}
+.login-form {
+    display: none;
+}
+.btnModalForm {
+    padding: 1rem 2rem;
 }
 .auth__container {
     padding: 2rem 3.2rem;
@@ -352,12 +366,7 @@
     cursor: pointer;
     padding: 1.4rem 0;
 }
-/* .auth__body {
- 
-}
-.auth-body__group {
 
-} */
 .auth-body-group__input {
     width: 100%;
     height: 4rem;
@@ -428,11 +437,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 .auth-social__link:hover {
     background-color: #fff;
     color: #666;
 }
+
+
 
 /* Header with Search */
 .header-withSearch {
