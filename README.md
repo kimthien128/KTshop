@@ -1,2 +1,2 @@
-# KT shop (only Home page)
-https://kimthien128.github.io/KTshop/
+# KT shop (FE, only Home page)
+Preview: https://kimthien128.github.io/KTshop/
